@@ -89,7 +89,6 @@ public class FirebirdConf extends AbstractArpConf<FirebirdConf> {
   }
 
   private CloseableDataSource newDataSource() {
-    System.out.println("VAHID newDataSource "+toJdbcConnectionString()+" "+username+" "+password);
     return DataSources.newGenericConnectionPoolDataSource(DRIVER,
       toJdbcConnectionString(), username, password, null, DataSources.CommitMode.DRIVER_SPECIFIED_COMMIT_MODE);
   }

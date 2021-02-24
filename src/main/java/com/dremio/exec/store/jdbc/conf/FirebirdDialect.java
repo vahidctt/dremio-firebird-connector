@@ -14,19 +14,16 @@ public class FirebirdDialect  extends ArpDialect {
 
     @Override
     public ContainerSupport supportsCatalogs() {
-        System.out.println("VAHID supportsCatalogs");
         return ContainerSupport.AUTO_DETECT;
     }
 
     @Override
     public ContainerSupport supportsSchemas() {
-        System.out.println("VAHID supportsSchemas");
         return ContainerSupport.AUTO_DETECT;
     }
 
     @Override
     public JdbcSchemaFetcher getSchemaFetcher(String name, DataSource dataSource, int timeout, JdbcStoragePlugin.Config config) {
-        System.out.println("VAHID getSchemaFetcher");
         return new FirebirdSchemaFetcher(name, dataSource, timeout, config);
     }
 

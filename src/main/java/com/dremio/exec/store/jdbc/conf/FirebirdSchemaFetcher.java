@@ -35,10 +35,8 @@ public class FirebirdSchemaFetcher extends JdbcSchemaFetcher {
 
     @Override
     public DatasetMetadata getTableMetadata(DatasetHandle datasetHandle) {
-        System.out.println("VAHID getTableMetadata ");
         DatasetMetadata md= super.getTableMetadata(datasetHandle);
-        System.out.println("VAHID super.getTableMetadata(datasetHandle) ");
-        return md;
+       return md;
     }
 
     @Override
@@ -53,7 +51,6 @@ public class FirebirdSchemaFetcher extends JdbcSchemaFetcher {
 
     @Override
     public DatasetHandleListing getTableHandles() {
-        System.out.println("VAHID getTableHandles ");
         ArrayList<String> tableNames=new ArrayList<>();
         try {
             DatabaseMetaData metaData = mDataSource.getConnection().getMetaData();
