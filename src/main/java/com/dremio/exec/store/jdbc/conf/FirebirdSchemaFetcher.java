@@ -54,7 +54,7 @@ public class FirebirdSchemaFetcher extends JdbcSchemaFetcher {
         ArrayList<String> tableNames=new ArrayList<>();
         try {
             DatabaseMetaData metaData = mDataSource.getConnection().getMetaData();
-            String[] types = {"TABLE"};
+            String[] types = {"TABLE","VIEW"};
             //Retrieving the columns in the database
             ResultSet tables = metaData.getTables(null, null, "%", types);
             while (tables.next()) {
