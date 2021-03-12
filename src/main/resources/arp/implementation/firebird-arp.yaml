@@ -38,6 +38,11 @@ data_types:
       name: "integer"
     required_cast_arguments: "none"
   - source:
+      name: "FLOAT"
+    dremio:
+      name: "float"
+    required_cast_arguments: "none"
+  - source:
       name: "SMALLINT"
     dremio:
       name: "integer"
@@ -54,6 +59,11 @@ data_types:
     required_cast_arguments: "none"
   - source:
       name: "DOUBLE"
+    dremio:
+      name: "double"
+    required_cast_arguments: "none"
+  - source:
+      name: "DOUBLE PRECISION"
     dremio:
       name: "double"
     required_cast_arguments: "none"
@@ -76,6 +86,26 @@ data_types:
       name: "CHAR"
     dremio:
       name: "varchar"
+    required_cast_arguments: "none"
+  - source:
+      name: "CHARACTER"
+    dremio:
+      name: "varchar"
+    required_cast_arguments: "none"
+  - source:
+      name: "DATE"
+    dremio:
+      name: "date"
+    required_cast_arguments: "none"
+  - source:
+      name: "TIME"
+    dremio:
+      name: "time"
+    required_cast_arguments: "none"
+  - source:
+      name: "TIMESTAMP"
+    dremio:
+      name: "timestamp"
     required_cast_arguments: "none"
   - source:
       name: "VARCHAR"
